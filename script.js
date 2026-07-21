@@ -4,7 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const CONTRACT_ADDRESS = '0x000...deploy_pending';
+    const CONTRACT_ADDRESS = '0x297758760572121251bb7e6ee489519612d47777';
 
     // ---- Force Video Autoplay ----
     const videos = document.querySelectorAll('video');
