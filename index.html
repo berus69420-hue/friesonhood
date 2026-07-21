@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$FRIES — Deep Fried on Hood Network 🍟</title>
+    <meta name="description" content="$FRIES is the crispiest play on Robinhood Chain. 1B supply, 3% fee powering the Deep Fry Program. Get your fries.">
+    <meta name="theme-color" content="#00C805">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Smoke particles -->
+    <div id="smoke-container"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <img src="assets/fries-box.jpg" alt="$FRIES" class="nav-logo-img">
+                <span>$FRIES</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#menu">The Menu</a>
+                <a href="#howtobuy">How to Buy</a>
+            </div>
+            <div class="nav-socials">
+                <a href="#" target="_blank" class="social-btn" title="Telegram" aria-label="Telegram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                </a>
+                <a href="#" target="_blank" class="social-btn" title="Twitter / X" aria-label="Twitter">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="#" target="_blank" class="social-btn" title="DexScreener" aria-label="DexScreener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 16l2-4 3 2 3-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-video-wrap">
+            <video autoplay muted loop playsinline id="heroVideo">
+                <source src="assets/hero.mp4" type="video/mp4">
+            </video>
+            <div class="watermark-cover">
+                <img src="assets/fries-box.jpg" alt="$FRIES" class="watermark-cover-img">
+            </div>
+            <div class="hero-video-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-pulse"></span>
+                LIVE ON ROBINHOOD CHAIN
+            </div>
+            <h1 class="hero-title">$FRIES</h1>
+            <p class="hero-sub">the crispiest play on hood network 🍟</p>
+            
+            <div class="hero-ca">
+                <div class="ca-box" id="caBox">
+                    <span class="ca-label">CA</span>
+                    <span class="ca-text" id="caText">0x000...deploy_pending</span>
+                    <button class="ca-copy-btn" id="caCopyBtn" aria-label="Copy contract address">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        <span class="copy-tooltip" id="copyTooltip">Copied!</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary" id="buyBtn">Buy $FRIES</a>
+                <a href="#menu" class="btn btn-ghost">The Menu 🍟</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Ticker -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>🍟 $FRIES</span><span>DEEP FRIED DEFI</span><span>ROBINHOOD CHAIN</span><span>HOLD 69K = EARN $USDG</span>
+                <span>🍟 $FRIES</span><span>DEEP FRIED DEFI</span><span>ROBINHOOD CHAIN</span><span>HOLD 69K = EARN $USDG</span>
+                <span>🍟 $FRIES</span><span>DEEP FRIED DEFI</span><span>ROBINHOOD CHAIN</span><span>HOLD 69K = EARN $USDG</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-media-col">
+                    <div class="about-media-wrap">
+                        <video autoplay muted loop playsinline class="about-video">
+                            <source src="assets/pepe-anim.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="about-text-col">
+                    <span class="section-tag">WTF IS $FRIES?</span>
+                    <h2 class="section-title">every trade<br>feeds the <span class="green-glow-text">fryer</span></h2>
+                    <p class="about-desc">
+                        $FRIES is what happens when degen energy meets actual utility on Hood Network. Inspired by the $TENDIES narrative — but with a deep fryer attached.
+                    </p>
+                    <p class="about-desc">
+                        3% on every trade. 2% goes straight into the <strong class="green-glow-text">Deep Fry Program</strong> — buying $CRASHCAT & $INDEX liquidity. The fees from that LP? Used to buy more $FRIES. Perpetual green candles. 📈
+                    </p>
+                    <p class="about-desc">
+                        The remaining 1% gets distributed as <strong class="green-glow-text">$USDG rewards</strong> to anyone holding 69,000+ $FRIES. You hold, you earn. Simple.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-pill"><span class="stat-val">1B</span> supply</div>
+                        <div class="stat-pill"><span class="stat-val">3%</span> fee</div>
+                        <div class="stat-pill"><span class="stat-val">69K</span> min hold</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Menu (Tokenomics) -->
+    <section id="menu" class="section">
+        <div class="container">
+            <span class="section-tag center">THE MENU</span>
+            <h2 class="section-title center">what's <span class="green-glow-text">cookin'</span></h2>
+
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <div class="menu-card-header">
+                        <span class="menu-emoji">🍟</span>
+                        <h3>3% Fee</h3>
+                    </div>
+                    <p>Every buy & sell. No wasted grease — every basis point works for you.</p>
+                    <div class="fee-split">
+                        <div class="fee-row">
+                            <div class="fee-bar-fill" style="width: 66%;"></div>
+                            <span>2% → Deep Fry</span>
+                        </div>
+                        <div class="fee-row">
+                            <div class="fee-bar-fill fee-bar-green" style="width: 33%;"></div>
+                            <span>1% → $USDG Rewards</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-card-header">
+                        <span class="menu-emoji">🔥</span>
+                        <h3>Deep Fry Program</h3>
+                    </div>
+                    <p>2% buys <strong>$CRASHCAT</strong> & <strong>$INDEX</strong> liquidity. LP fees flow back to buy $FRIES. The fryer never turns off.</p>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-card-header">
+                        <span class="menu-emoji">💵</span>
+                        <h3>$USDG Rewards</h3>
+                    </div>
+                    <p>1% paid out in stablecoins. Hold <strong class="green-glow-text">69,000+</strong> $FRIES and collect your share. Every distribution.</p>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-card-header">
+                        <span class="menu-emoji">♾️</span>
+                        <h3>1 Billion. Fixed.</h3>
+                    </div>
+                    <p>No mint. No inflation. No rugs. Just pure, crispy supply designed for diamond hands.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Buy -->
+    <section id="howtobuy" class="section">
+        <div class="container">
+            <span class="section-tag center">HOW TO BUY</span>
+            <h2 class="section-title center">grab your <span class="green-glow-text">$FRIES</span></h2>
+
+            <div class="steps-row">
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <h4>wallet up</h4>
+                    <p>MetaMask or any EVM wallet. Add Hood Network.</p>
+                </div>
+                <div class="step-divider"></div>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <h4>get $USDG / ETH</h4>
+                    <p>Bridge funds to Hood Network via the official bridge.</p>
+                </div>
+                <div class="step-divider"></div>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <h4>swap</h4>
+                    <p>Paste the CA, set slippage to 5%, smash buy. 🍟</p>
+                </div>
+            </div>
+
+            <div class="buy-ca-section">
+                <div class="ca-box ca-box-lg" id="caBox2">
+                    <span class="ca-label">CA</span>
+                    <span class="ca-text" id="caText2">0x000...deploy_pending</span>
+                    <button class="ca-copy-btn" id="caCopyBtn2" aria-label="Copy CA">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        <span class="copy-tooltip" id="copyTooltip2">Copied!</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="assets/fries-box.jpg" alt="$FRIES" class="footer-logo-img">
+                    <span>$FRIES</span>
+                </div>
+                <div class="footer-socials">
+                    <a href="#" target="_blank" class="social-btn" title="Telegram">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    </a>
+                    <a href="#" target="_blank" class="social-btn" title="Twitter / X">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="#" target="_blank" class="social-btn" title="DexScreener">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 16l2-4 3 2 3-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-disclaimer">$FRIES is a meme on Robinhood Chain. Not financial advice. DYOR. Never ape more than you can afford to lose.</p>
+            <p class="footer-copy">© 2025 $FRIES · fried with love on Hood Network 🍟</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
