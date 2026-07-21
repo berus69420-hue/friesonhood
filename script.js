@@ -6,6 +6,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const CONTRACT_ADDRESS = '0x000...deploy_pending';
 
+    // ---- Force Video Autoplay ----
+    const videos = document.querySelectorAll('video');
+    videos.forEach(v => {
+        v.muted = true;
+        v.play().catch(() => {
+            // Retry play on first touch or scroll if browser blocked autoplay
+            const playOnInteraction = () => {
+                v.play();
+                window.removeEventListener('touchstart', playOnInteraction);
+                window.removeEventListener('click', playOnInteraction);
+            };
+            window.addEventListener('touchstart', playOnInteraction);
+            window.addEventListener('click', playOnInteraction);
+        });
+    });
+
     // ---- Navbar scroll ----
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
